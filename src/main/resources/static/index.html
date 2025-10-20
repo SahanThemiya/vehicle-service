@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Service Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="dashboard">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <h2 class="logo">🚗 FleetPro</h2>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">Dashboard</a></li>
+                <li><a href="#">Add Vehicle</a></li>
+                <li><a href="#">Search</a></li>
+                <li><a href="#">Manage</a></li>
+            </ul>
+        </nav>
+        <footer>
+            <p>&copy; 2025 FleetPro</p>
+        </footer>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="content">
+        <header>
+            <h1>Vehicle Service Dashboard</h1>
+            <p>Manage Your Fleet with Ease</p>
+        </header>
+
+        <section class="cards">
+            <!-- Add Vehicle -->
+            <div class="card glass">
+                <h2>Add New Vehicle</h2>
+                <form id="addVehicleForm">
+                    <label>Vehicle Type</label>
+                    <input type="text" id="vehicleType" required>
+
+                    <label>Service Year</label>
+                    <input type="number" id="serviceYear" required>
+
+                    <label>Owner Name</label>
+                    <input type="text" id="ownerName" required>
+
+                    <button type="submit" class="btn">Add Vehicle</button>
+                </form>
+            </div>
+
+            <!-- Search by Year -->
+            <div class="card glass">
+                <h2>Search by Service Year</h2>
+                <form id="searchYearForm">
+                    <label>Service Year</label>
+                    <input type="number" id="searchYear" required>
+                    <button type="submit" class="btn">Search Vehicles</button>
+                </form>
+            </div>
+
+            <!-- Get Vehicle Type -->
+            <div class="card glass">
+                <h2>Get Vehicle Type</h2>
+                <form id="getTypeForm">
+                    <label>Vehicle ID</label>
+                    <input type="number" id="vehicleId" required>
+                    <button type="submit" class="btn">Get Type</button>
+                </form>
+            </div>
+
+            <!-- Delete by Year -->
+            <div class="card glass">
+                <h2>Delete by Service Year</h2>
+                <form id="deleteYearForm">
+                    <label>Service Year</label>
+                    <input type="number" id="deleteYear" required>
+                    <button type="submit" class="btn delete">Delete Vehicles</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Results -->
+        <section class="results glass">
+            <h2>Results</h2>
+            <div id="results"></div>
+        </section>
+    </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

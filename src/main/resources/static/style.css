@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #004d40, #009688);
+    color: #333;
+    height: 100vh;
+    display: flex;
+}
+
+/* Layout */
+.dashboard {
+    display: flex;
+    width: 100%;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 240px;
+    background: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(10px);
+    color: #fff;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 3px 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar .logo {
+    font-size: 1.8em;
+    color: #ffb300;
+    margin-bottom: 40px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar a {
+    color: #eee;
+    text-decoration: none;
+    font-weight: 500;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a.active,
+.sidebar a:hover {
+    color: #ffb300;
+}
+
+/* Main Content */
+.content {
+    flex: 1;
+    padding: 40px;
+    overflow-y: auto;
+}
+
+header h1 {
+    color: #004d40;
+    font-size: 2em;
+    margin-bottom: 5px;
+}
+
+header p {
+    color: #555;
+    margin-bottom: 30px;
+}
+
+/* Cards Grid */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+/* Glassmorphism Cards */
+.glass {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    padding: 25px;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.card h2 {
+    color: #ffb300;
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #eee;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    margin-bottom: 15px;
+    font-size: 1em;
+    outline: none;
+    background: rgba(255, 255, 255, 0.3);
+    color: #222;
+}
+
+/* Buttons */
+.btn {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #009688, #00bfa5);
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 15px rgba(0, 150, 136, 0.4);
+}
+
+.btn.delete {
+    background: linear-gradient(135deg, #ff7043, #ff9800);
+}
+
+/* Results */
+.results {
+    padding: 25px;
+}
+
+.vehicle-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.vehicle-item {
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 10px;
+    padding: 15px;
+    color: #fff;
+}
+
+.vehicle-item h3 {
+    color: #ffb300;
+}
+
+.message {
+    padding: 12px;
+    border-radius: 10px;
+    margin-top: 15px;
+    font-weight: 500;
+}
+
+.success {
+    background: rgba(0, 200, 83, 0.3);
+    border: 1px solid #00c853;
+}
+
+.error {
+    background: rgba(244, 67, 54, 0.3);
+    border: 1px solid #f44336;
+}
+
+.info {
+    background: rgba(33, 150, 243, 0.3);
+    border: 1px solid #2196f3;
+}
+
+.loading {
+    text-align: center;
+    padding: 10px;
+    color: #ffb300;
+}
